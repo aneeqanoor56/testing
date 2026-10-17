@@ -12,14 +12,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("My App"),
+          title: const Text("My first feelings"),
         ),
         body: Center(
           child: ElevatedButton(
             onPressed: () {
-          
             },
-            child: const Text("Click Me"),
+            child: const Text("hold me tight"),
           ),
         ),
       ),
