@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -9,19 +9,80 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("My first feelings"),
+          backgroundColor: Colors.blue,
+          title: Text('my app'),
         ),
-        body: Center(
-          child: ElevatedButton(
-            onPressed: () {
-            },
-            child: const Text("hold me tight"),
-          ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children:[
+            Row(
+            children: [
+            Container(
+              margin: EdgeInsets.symmetric(),
+          color: Colors.purpleAccent,
+          height: 120,
+          width: 120,
         ),
-      ),
-    );
+            Container(
+              margin: EdgeInsets.symmetric(),
+          color: Colors.blue ,
+          height: 120,
+          width: 120,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(),
+          color: Colors.purpleAccent,
+          height: 120,
+          width: 120,
+        ),
+            Container(
+              margin: EdgeInsets.symmetric(),
+          color: Colors.blue ,
+          height: 120,
+          width: 120,
+        ),
+          ]
+    
+        ), 
+        Row(
+            children: [
+            Container(
+              margin: EdgeInsets.symmetric(),
+          color: Colors.purpleAccent,
+          height: 120,
+          width: 120,
+        ),
+            Container(
+              margin: EdgeInsets.symmetric(),
+          color: Colors.blue ,
+          height: 120,
+          width: 120,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(),
+          color: Colors.purpleAccent,
+          height: 120,
+          width: 120,
+        ),
+            Container(
+              margin: EdgeInsets.symmetric(),
+          color: Colors.blue ,
+          height: 120,
+          width: 120,
+        ),
+          ]
+    
+        ), 
+       ]
+        ),
+        
+        )
+          
+      );
+
   }
 }
