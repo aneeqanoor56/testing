@@ -14,11 +14,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.blue,
           title: Text('my app'),
+  
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+         // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children:[
-            Row(
+          /* Row(
             children: [
             Container(
               margin: EdgeInsets.symmetric(),
@@ -51,33 +52,40 @@ class MyApp extends StatelessWidget {
         ),
           ]
     
-        ), 
+        ), */
         Row(
             children: [
+            Expanded(child: 
             Container(
-              margin: EdgeInsets.symmetric(),
-          color: Colors.purpleAccent,
-          height: 120,
-          width: 120,
+              //margin: EdgeInsets.symmetric(),
+              color: Colors.purpleAccent,
+              height: 120,
+          
         ),
+        ),
+            Expanded(child: 
             Container(
-              margin: EdgeInsets.symmetric(),
-          color: Colors.blue ,
-          height: 120,
-          width: 120,
+             // margin: EdgeInsets.symmetric(),
+               color: Colors.blue ,
+               height: 120,
             ),
+            ),
+            Expanded(child: 
             Container(
-              margin: EdgeInsets.symmetric(),
-          color: Colors.purpleAccent,
-          height: 120,
-          width: 120,
+              //margin: EdgeInsets.symmetric(),
+              color: Colors.purpleAccent,
+              height: 120,
         ),
-            Container(
-              margin: EdgeInsets.symmetric(),
+        ),
+
+            Expanded(child:Container(
+              //margin: EdgeInsets.symmetric(),
           color: Colors.blue ,
           height: 120,
-          width: 120,
+          
         ),
+        ),
+
           ]
     
         ), 
