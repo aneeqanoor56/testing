@@ -1,100 +1,68 @@
 import 'package:flutter/material.dart';
+
 void main() {
-  runApp(MyApp());
+  runApp(Containers());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Containers extends StatelessWidget {
+  const Containers({super.key});
 
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: Text('my app'),
-  
-        ),
+        appBar: AppBar(backgroundColor: Colors.white, title: Text('my app')),
         body: Column(
-         // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children:[
-          /* Row(
-            children: [
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
             Container(
               margin: EdgeInsets.symmetric(),
-          color: Colors.purpleAccent,
-          height: 120,
-          width: 120,
-          child: Text('flutter app code',
-          style: TextStyle(
-            color: Colors.black12,
-            fontSize: 40,
-          ),),
-        ),
-            Container(
-              margin: EdgeInsets.symmetric(),
-          color: Colors.blue ,
-          height: 120,
-          width: 120,
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(),
-          color: Colors.purpleAccent,
-          height: 120,
-          width: 120,
-        ),
-            Container(
-              margin: EdgeInsets.symmetric(),
-          color: Colors.blue ,
-          height: 120,
-          width: 120,
-        ),
-          ]
-    
-        ), */
-        Row(
-            children: [
-            Expanded(child: 
-            Container(
-              //margin: EdgeInsets.symmetric(),
-              color: Colors.purpleAccent,
+              color: Colors.red,
               height: 120,
-          
-        ),
-        ),
-            Expanded(child: 
-            Container(
-             // margin: EdgeInsets.symmetric(),
-               color: Colors.blue ,
-               height: 120,
+              width: 120,
             ),
-            ),
-            Expanded(child: 
             Container(
-              //margin: EdgeInsets.symmetric(),
-              color: Colors.purpleAccent,
+              margin: EdgeInsets.symmetric(),
+              color: Colors.green,
+              height: 200,
+              width: 120,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(),
+              color: Colors.lightGreen,
               height: 120,
-        ),
-        ),
+              width: 120,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  margin: EdgeInsets.symmetric(),
+                  color: Colors.blue,
+                  height: 120,
+                ),
 
-            Expanded(child:Container(
-              //margin: EdgeInsets.symmetric(),
-          color: Colors.blue ,
-          height: 120,
-          
-        ),
-        ),
+                Container(
+                  margin: EdgeInsets.symmetric(),
+                  color: Colors.black,
+                  height: 120,
+                ),
+                Container(
+                  margin: EdgeInsets.symmetric(),
+                  color: Colors.orange,
+                  height: 120,
+                ),
 
-          ]
-    
-        ), 
-       ]
+                Container(
+                  margin: EdgeInsets.symmetric(),
+                  color: Colors.purple,
+                  height: 120,
+                ),
+              ],
+            ),
+          ],
         ),
-        
-        )
-          
-      );
-
+      ),
+    );
   }
 }

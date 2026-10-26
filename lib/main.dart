@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'login.dart';
+import 'package:flutter_application_1/theme.dart';
+
 void main() {
-  runApp(
-    MaterialApp(
-      home: Login(),
-    ),
-  );
-}  
+  runApp(MaterialApp(home: MyApp()));
+}
