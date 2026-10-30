@@ -1,64 +1,40 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Containers());
+  runApp(MyApp());
 }
 
-class Containers extends StatelessWidget {
-  const Containers({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(backgroundColor: Colors.white, title: Text('my app')),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        appBar: AppBar(
+          backgroundColor: Colors.orange,
+          foregroundColor: Colors.black26,
+        ),
+        body: Row(
           children: [
-            Container(
-              margin: EdgeInsets.symmetric(),
-              color: Colors.red,
-              height: 120,
-              width: 120,
+            Expanded(
+              child: Column(
+                children: [
+                  Expanded(child: Container(color: Colors.green)),
+                  Expanded(flex: 3, child: Container(color: Colors.red)),
+                  Expanded(child: Container(color: Colors.blue)),
+                ],
+              ),
             ),
-            Container(
-              margin: EdgeInsets.symmetric(),
-              color: Colors.green,
-              height: 200,
-              width: 120,
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(),
-              color: Colors.lightGreen,
-              height: 120,
-              width: 120,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  margin: EdgeInsets.symmetric(),
-                  color: Colors.blue,
-                  height: 120,
-                ),
-
-                Container(
-                  margin: EdgeInsets.symmetric(),
-                  color: Colors.black,
-                  height: 120,
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(),
-                  color: Colors.orange,
-                  height: 120,
-                ),
-
-                Container(
-                  margin: EdgeInsets.symmetric(),
-                  color: Colors.purple,
-                  height: 120,
-                ),
-              ],
+            Expanded(
+              child: Column(
+                children: [
+                  Expanded(child: Container(color: Colors.black)),
+                  Expanded(child: Container(color: Colors.purple)),
+                  Expanded(child: Container(color: Colors.grey)),
+                ],
+              ),
             ),
           ],
         ),
