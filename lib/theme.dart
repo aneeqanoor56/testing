@@ -62,6 +62,31 @@ class _ChatuiState extends State<Chatui> {
                 ),
               ),
             ),
+
+            Row(
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: Text('unread', style: TextStyle(color: Colors.white)),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text('All', style: TextStyle(color: Colors.white)),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'favorite',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text('groups', style: TextStyle(color: Colors.white)),
+                ),
+              ],
+            ),
+
             Expanded(
               child: ListView.builder(
                 itemCount: students.length,
