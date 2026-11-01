@@ -15,7 +15,6 @@ class Chat extends StatelessWidget {
     'okay',
   ];
 
-  bool isme = true;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,8 +27,8 @@ class Chat extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: ListView.builder(
                   itemCount: messages.length,
-                  itemBuilder: (context, Index) {
-                    bool isme = Index % 2 != 0;
+                  itemBuilder: (context, index) {
+                    bool isme = index % 2 != 0;
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Align(
@@ -39,7 +38,7 @@ class Chat extends StatelessWidget {
                         child: Container(
                           padding: EdgeInsets.all(10),
                           color: Colors.green.shade100,
-                          child: Text(messages[Index]),
+                          child: Text(messages[index]),
                           //Text(messages[indes]),
                         ),
                       ),
