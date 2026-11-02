@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/dashboard.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(Login());
@@ -8,6 +10,9 @@ class Login extends StatelessWidget {
   Login({super.key});
   final email = TextEditingController();
   final password = TextEditingController();
+
+  String correctemail = "aneeqa@gamil.com";
+  String correctpassword = "1345678";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -77,7 +82,14 @@ class Login extends StatelessWidget {
                     //   backgroundColor: Colors.transparent,
                     //   shadowColor: Colors.transparent,
                     // ),
-                    onPressed: () {},
+                    onPressed: () {
+                      if (email.text == correctemail &&
+                          password.text == correctpassword) {
+                        Get.to(Dashboard(email: email.text, name: "aneeqa"));
+                      } else {
+                        Get.snackbar('Login failed', "wrong details");
+                      }
+                    },
                     child: Text(
                       'log in',
                       style: TextStyle(color: Colors.black),
