@@ -15,7 +15,7 @@ class Login extends StatelessWidget {
   String correctpassword = "1345678";
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
