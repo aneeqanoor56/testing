@@ -33,7 +33,7 @@ class _ChatuiState extends State<Chatui> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
@@ -86,7 +86,6 @@ class _ChatuiState extends State<Chatui> {
                 ),
               ],
             ),
-
             Expanded(
               child: ListView.builder(
                 itemCount: students.length,

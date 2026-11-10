@@ -10,7 +10,6 @@ class Login extends StatelessWidget {
   Login({super.key});
   final email = TextEditingController();
   final password = TextEditingController();
-
   String correctemail = "aneeqa@gamil.com";
   String correctpassword = "1345678";
   @override
