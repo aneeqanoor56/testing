@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_application_1/app_route.dart';
+import 'package:flutter_application_1/app_route.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-
-//import 'localstorage.dart';
 
 class Localstorage extends StatefulWidget {
   const Localstorage({super.key});
@@ -26,25 +24,25 @@ class _LocalstorageState extends State<Localstorage> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // initialRoute: AppRoutes.login,
-      // getPages: AppRoutes.pages,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("local storage"),
-          backgroundColor: Colors.blueAccent,
-          centerTitle: true,
-        ),
-        body: Homescreen(counter: counter, box: box),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            counter.value++;
-            box.write('counter', counter.value);
-            // color.value = color.value == Colors.red ? Colors.blue : Colors.red;
-          },
+      initialRoute: AppRoutes.login,
+      getPages: AppRoutes.pages,
+      // home: Scaffold(
+      //   appBar: AppBar(
+      //     title: Text("local storage"),
+      //     backgroundColor: Colors.blueAccent,
+      //     centerTitle: true,
+      //   ),
+      //   body: Homescreen(counter: counter, box: box),
+      //   floatingActionButton: FloatingActionButton(
+      //     onPressed: () {
+      //       counter.value++;
+      //       box.write('counter', counter.value);
+      //       // color.value = color.value == Colors.red ? Colors.blue : Colors.red;
+      //     },
 
-          child: Icon(Icons.add),
-        ),
-      ),
+      //     child: Icon(Icons.add),
+      //   ),
+      // ),
     );
   }
 }

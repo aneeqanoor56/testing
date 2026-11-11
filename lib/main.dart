@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/localstorage.dart';
+//import 'package:flutter_application_1/localstorage.dart';
+import 'package:flutter_application_1/test.dart/image_code.dart';
 
 // void main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
@@ -7,5 +8,5 @@ import 'package:flutter_application_1/localstorage.dart';
 //   runApp(Localstorage());
 // }
 void main() {
-  runApp(Localstorage());
+  runApp(imagecode());
 }

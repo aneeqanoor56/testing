@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(imagecode());
 }
 
 class imagecode extends StatelessWidget {
-  const imagecode({super.key});
+  imagecode({super.key});
+  var showimagecode = 'assets/images/image1.png'.obs;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
@@ -27,14 +29,21 @@ class imagecode extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
 
               children: [
-                Container(
-                  height: 185,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey),
+                Obx(
+                  () => Container(
+                    height: 185,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey),
+                    ),
+                    child: Image.asset(
+                      // 'assets/images/image1.png',
+                      showimagecode.value,
+                      fit: BoxFit.contain,
+                    ),
                   ),
-                  child: Image.asset('assets/images/image1.png'),
                 ),
+
                 SizedBox(height: 15),
 
                 Text(
@@ -70,7 +79,9 @@ class imagecode extends StatelessWidget {
                 Row(
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showimagecode.value = 'assets/images/image2.jpg';
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.grey.shade200,
                         foregroundColor: Colors.black,
@@ -84,7 +95,9 @@ class imagecode extends StatelessWidget {
                     SizedBox(width: 8),
 
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showimagecode.value = 'assets/images/image3.jpg';
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.grey.shade200,
                         foregroundColor: Colors.black,
@@ -98,7 +111,9 @@ class imagecode extends StatelessWidget {
                     SizedBox(width: 8),
 
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showimagecode.value = 'assets/images/image4.png';
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.grey.shade200,
                         foregroundColor: Colors.black,
