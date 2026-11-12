@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/navi.dart';
 import 'package:get/get.dart';
 
-void main() {
-  runApp(Chatui());
-}
-
 class Chatui extends StatefulWidget {
-  const Chatui({super.key});
+  Chatui({super.key});
 
   @override
   State<Chatui> createState() => _ChatuiState();
@@ -32,124 +28,118 @@ class _ChatuiState extends State<Chatui> {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(
-          title: Text(
-            'Chat UI',
-            style: TextStyle(fontSize: 30, fontStyle: FontStyle.italic),
-          ),
-          centerTitle: true,
-          backgroundColor: Colors.greenAccent,
-          foregroundColor: Colors.black,
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        title: Text(
+          'Chat UI',
+          style: TextStyle(fontSize: 30, fontStyle: FontStyle.italic),
         ),
-        body: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(2.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  hint: Text(
-                    'search here',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
+        centerTitle: true,
+        backgroundColor: Colors.greenAccent,
+        foregroundColor: Colors.black,
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(2.0),
+            child: TextField(
+              decoration: InputDecoration(
+                hint: Text(
+                  'search here',
+                  style: TextStyle(color: Colors.white),
+                ),
+                prefixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
                 ),
               ),
             ),
+          ),
 
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  child: Text('unread', style: TextStyle(color: Colors.white)),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text('All', style: TextStyle(color: Colors.white)),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'favorite',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text('groups', style: TextStyle(color: Colors.white)),
-                ),
-              ],
-            ),
-            Expanded(
-              child: ListView.builder(
-                itemCount: students.length,
-                itemBuilder: ((context, index) {
-                  return Column(
-                    children: [
-                      ListTile(
-                        onTap: () {
-                          print(index);
+          Row(
+            children: [
+              TextButton(
+                onPressed: () {},
+                child: Text('unread', style: TextStyle(color: Colors.white)),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text('All', style: TextStyle(color: Colors.white)),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text('favorite', style: TextStyle(color: Colors.white)),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text('groups', style: TextStyle(color: Colors.white)),
+              ),
+            ],
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: students.length,
+              itemBuilder: ((context, index) {
+                return Column(
+                  children: [
+                    ListTile(
+                      onTap: () {
+                        print(index);
 
-                          // Navigator.push(
-                          //   // context,
-                          //   // MaterialPageRoute(
-                          //   //   builder: (context) =>
-                          //   //       Chat(name: students[index], n: index),
-                          //   // ),
-                          // );
-                          Get.to(Chat(name: students[index], n: index));
-                        },
-                        leading: CircleAvatar(child: Icon(Icons.person)),
-                        title: Text(
-                          students[index],
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        subtitle: Text(
-                          'WHO ARE YOU',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        trailing: Column(
-                          children: [
-                            Text(
-                              "10:00 Am",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            CircleAvatar(
-                              radius: 7,
-                              backgroundColor: Colors.teal,
-                              child: Text(
-                                '3',
-                                style: TextStyle(
-                                  fontSize: 10,
-                                  color: Colors.white,
-                                ),
+                        // Navigator.push(
+                        //   // context,
+                        //   // MaterialPageRoute(
+                        //   //   builder: (context) =>
+                        //   //       Chat(name: students[index], n: index),
+                        //   // ),
+                        // );
+                        Get.to(Chat(name: students[index], n: index));
+                      },
+                      leading: CircleAvatar(child: Icon(Icons.person)),
+                      title: Text(
+                        students[index],
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      subtitle: Text(
+                        'WHO ARE YOU',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      trailing: Column(
+                        children: [
+                          Text(
+                            "10:00 Am",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          CircleAvatar(
+                            radius: 7,
+                            backgroundColor: Colors.teal,
+                            child: Text(
+                              '3',
+                              style: TextStyle(
+                                fontSize: 10,
+                                color: Colors.white,
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      // Divider(
-                      // height: 10,
-                      //thickness: 0.5,
-                      //color: Colors.black87,
-                      // ),
-                    ],
-                  );
-                }),
-              ),
+                    ),
+                    // Divider(
+                    // height: 10,
+                    //thickness: 0.5,
+                    //color: Colors.black87,
+                    // ),
+                  ],
+                );
+              }),
             ),
-          ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.chat),
-        ),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.chat),
       ),
     );
   }

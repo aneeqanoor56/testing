@@ -6,18 +6,16 @@ class Dashboard extends StatelessWidget {
   final String name;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(),
-        body: Container(
-          child: Column(
-            children: [
-              Text('email: $email'),
-              Text('name: $name'),
-              Text('aneeqa'),
-              Text('4567'),
-            ],
-          ),
+    return Scaffold(
+      appBar: AppBar(),
+      body: Container(
+        child: Column(
+          children: [
+            Text('email: $email'),
+            Text('name: $name'),
+            Text('aneeqa'),
+            Text('4567'),
+          ],
         ),
       ),
     );
